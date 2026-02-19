@@ -1,13 +1,16 @@
+import dynamic from 'next/dynamic'
 import Navigation from './components/Navigation'
 import Hero from './components/Hero'
-import Services from './components/Services'
-import MixPlayer from './components/MixPlayer'
-import Gallery from './components/Gallery'
-import AIEmployee from './components/AIEmployee'
-import Booking from './components/Booking'
-import Testimonials from './components/Testimonials'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
+
+// Lazy load below-the-fold components
+const Services = dynamic(() => import('./components/Services'))
+const MixPlayer = dynamic(() => import('./components/MixPlayer'))
+const Gallery = dynamic(() => import('./components/Gallery'))
+const AIEmployee = dynamic(() => import('./components/AIEmployee'))
+const Booking = dynamic(() => import('./components/Booking'))
+const Testimonials = dynamic(() => import('./components/Testimonials'))
+const Contact = dynamic(() => import('./components/Contact'))
+const Footer = dynamic(() => import('./components/Footer'))
 
 export default function Home() {
   return (
