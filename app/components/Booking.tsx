@@ -1,11 +1,20 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Calendar, Clock } from 'lucide-react'
 
 export default function Booking() {
   const [form, setForm] = useState({ nume: '', telefon: '', data: '', tip: '', locatie: '', persoane: '', mesaj: '' })
+
+  // Listen for date selection from Calendar component
+  useEffect(() => {
+    const handler = (e: CustomEvent<{ date: string }>) => {
+      setForm(prev => ({ ...prev, data: e.detail.date }))
+    }
+    window.addEventListener('dj-select-date', handler as EventListener)
+    return () => window.removeEventListener('dj-select-date', handler as EventListener)
+  }, [])
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()

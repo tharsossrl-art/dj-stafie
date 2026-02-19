@@ -6,6 +6,7 @@ import Hero from './components/Hero'
 const Services = dynamic(() => import('./components/Services'))
 const MixPlayer = dynamic(() => import('./components/MixPlayer'))
 const Gallery = dynamic(() => import('./components/Gallery'))
+const AvailabilityCalendar = dynamic(() => import('./components/Calendar'))
 const AIEmployee = dynamic(() => import('./components/AIEmployee'))
 const Booking = dynamic(() => import('./components/Booking'))
 const Testimonials = dynamic(() => import('./components/Testimonials'))
@@ -20,6 +21,7 @@ export default function Home() {
       <Services />
       <MixPlayer />
       <Gallery />
+      <AvailabilityCalendar />
       <AIEmployee />
       <Booking />
       <Testimonials />
