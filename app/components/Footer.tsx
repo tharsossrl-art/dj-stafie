@@ -20,7 +20,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 pt-6 border-t border-zinc-900 flex flex-col md:flex-row items-center justify-between gap-2">
-          <span className="text-zinc-700 text-xs">© 2025 S T A F I E. Toate drepturile rezervate.</span>
+          <span className="text-zinc-700 text-xs">© 2026 S T A F I E. Toate drepturile rezervate.</span>
           <a href="https://apprapid.ro" target="_blank" rel="noopener noreferrer" className="text-zinc-600 text-xs hover:text-zinc-400 transition-colors">
             Powered by AppRapid · apprapid.ro
           </a>
